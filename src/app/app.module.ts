@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './common/navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './common/footer/footer.component';
+import { IconGroupComponent } from './home/components/icon-group/icon-group.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -17,7 +18,8 @@ const appRoutes: Routes = [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    IconGroupComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes)
