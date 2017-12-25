@@ -1,0 +1,28 @@
+.project {
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+
+  .project-image > img{
+    width:100%;
+  }
+
+  .project-desc {
+    > p {
+      padding-left: 4px;
+    }
+    padding: 4px;
+  }
+
+  .project-links {
+    padding: 4px 8px;
+    background-color: #f0f0f0;
+    > a {
+      display: inline-block;
+      vertical-align: middle;
+      width:10%;
+      > img {
+        width:100%;
+      }
+    }
+  }
+}
