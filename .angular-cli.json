@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "portfolio-website"
+    "name": "test"
   },
   "apps": [
     {
@@ -9,7 +9,6 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "assets/images",
         "favicon.ico"
       ],
       "index": "index.html",
@@ -21,15 +20,14 @@
       "prefix": "app",
       "styles": [
         "./resources/css/bootstrap.min.css",
-        "./resources/css/font-awesome.min.css",
+        "./resources/css/fontawesome-all.min.css",
         "styles.scss"
       ],
       "scripts": [
         "./resources/js/utils.js",
         "./resources/js/tether.js",
-        "./resources/js/jquery-3.2.1.min.js",
-        "./resources/js/bootstrap.min.js",
-        "./resources/js/shift.js"
+        "../node_modules/jquery/dist/jquery.min.js",
+        "./resources/js/bootstrap.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
@@ -63,7 +61,7 @@
     }
   },
   "defaults": {
-    "styleExt": "scss",
+    "styleExt": "css",
     "component": {}
   }
 }

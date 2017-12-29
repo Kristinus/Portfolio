@@ -1,4 +1,4 @@
-<nav class="navbar navbar-toggleable-sm navbar-default fixed-top affix-top">
+<nav class="navbar navbar-toggleable-sm navbar-default fixed-top affix-top" [ngClass]="setClasses()">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -9,7 +9,7 @@
   <div class="navbar-collapse collapse">
     <ul class="nav navbar-nav navbar-right">
       <li class="nav-link"><a href="mailto:bryan.m.kristiono@gmail.com">Contact</a></li>
-      <li class="nav-link"><a [routerLink]="['/Portfolio']">Portfolio</a></li>
+      <li class="nav-link"><a [routerLink]="['/Projects']">Projects</a></li>
       <li class="nav-link"><a target="_blank" href="./assets/resume.pdf">Resume</a></li>
     </ul>
   </div>

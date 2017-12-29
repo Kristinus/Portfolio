@@ -12,6 +12,12 @@ import { ProjectLinkComponent } from './projects/components/project-link/project
 import { ProjectsService } from './services/projects.service';
 import { ProjectRowComponent } from './projects/components/project-row/project-row.component';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TextBackgroundComponent } from './home/components/text-background/text-background.component';
+import { RainBackgroundComponent } from './home/components/rain-background/rain-background.component';
+import * as $ from 'jquery';
+window['$'] = window['jQuery'] = $;
+
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'Projects', component: ProjectsComponent },
@@ -27,10 +33,13 @@ const appRoutes: Routes = [
     IconGroupComponent,
     ProjectsComponent,
     ProjectLinkComponent,
-    ProjectRowComponent
+    ProjectRowComponent,
+    TextBackgroundComponent,
+    RainBackgroundComponent
   ],
   imports: [
-    BrowserModule, RouterModule.forRoot(appRoutes)
+    BrowserModule, RouterModule.forRoot(appRoutes),
+    NgbModule.forRoot()
   ],
   providers: [ ProjectsService ],
   bootstrap: [ AppComponent ]

@@ -9,7 +9,7 @@ import { ProjectsService } from '../../../services/projects.service';
 })
 export class ProjectRowComponent implements OnInit {
   @Input() year: number;
-  private projects: Project[];
+  projects: Project[];
   constructor(private _projectService: ProjectsService) {
   }
 

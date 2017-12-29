@@ -7,7 +7,7 @@ import { ProjectsService } from '../services/projects.service';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  private years: number[];
+  years: number[];
   constructor(private _projects: ProjectsService ) {
     this.years = this._projects.getYears();
   }

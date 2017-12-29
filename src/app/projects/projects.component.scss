@@ -1,0 +1,23 @@
+::ng-deep .card {
+  border-radius: 0;
+  border:none;
+
+  .card-header {
+    border: none;
+    background: none;
+    > a {
+      color:black;
+      > span {
+        left:0px;
+      }
+      > i {
+        position: absolute;
+        right: 0px;
+      }
+    }
+  }
+  .tabpanel {
+    transition: 1s;
+  }
+
+}
