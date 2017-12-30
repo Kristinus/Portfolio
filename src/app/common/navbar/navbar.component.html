@@ -1,12 +1,11 @@
-<nav class="navbar navbar-toggleable-sm navbar-default fixed-top affix-top" [ngClass]="setClasses()">
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-  <a class="navbar-brand page-scroll" [routerLink]="'/'">Bryan Kristiono
-                </a>
+<nav class="navbar navbar-toggleable navbar-default fixed-top affix-top" [ngClass]="setClasses()">
+  <button type="button" class="navbar-toggler navbar-toggler-right" (click)="isCollapsed = !isCollapsed"
+  [attr.aria-expanded]="!isCollapsed" aria-controls="collapse">
+    <i class="fas fa-bars"></i>
+  </button>
+  <a class="navbar-brand page-scroll" [routerLink]="'/'">Bryan Kristiono</a>
 
-  <div class="navbar-collapse collapse">
+  <div id="collapse" [ngbCollapse] ="isCollapsed" class="navbar-collapse collapse">
     <ul class="nav navbar-nav navbar-right">
       <li class="nav-link"><a href="mailto:bryan.m.kristiono@gmail.com">Contact</a></li>
       <li class="nav-link"><a [routerLink]="['/Projects']">Projects</a></li>

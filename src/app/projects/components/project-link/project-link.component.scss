@@ -15,6 +15,9 @@
 
   .project-desc {
     position: relative;
+    > h4 {
+      margin: 0;
+    }
     > p {
       padding-left: 4px;
     }

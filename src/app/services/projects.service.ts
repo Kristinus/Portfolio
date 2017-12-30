@@ -42,7 +42,7 @@ export class ProjectsService {
 
     this.p2016.push(
       new Project(2017, "Angular Motion Simulator",
-      "School Project", "BlackMamba-icon.jpg", "", "RickHansenRobotics/FRC-2017-1241-SW"));
+      "School Project", "", "", "RickHansenRobotics/FRC-2017-1241-SW"));
   }
 
   getYears(): number[] {

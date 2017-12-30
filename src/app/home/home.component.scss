@@ -7,5 +7,12 @@
 }
 
 .name {
+    font-size: 3.8rem;
+    text-align: center;
+}
+
+@media (min-width: 576px) {
+  .name {
     font-size: 6rem;
+  }
 }

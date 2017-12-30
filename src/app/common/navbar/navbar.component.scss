@@ -1,11 +1,25 @@
 @import "../../../resources/css/constants";
 
+.navbar-toggler-right {
+  right: 1.5rem;
+}
+
 .navbar-default {
     background-color: rgba($colour-primary, 0.7);
     font-size: 1.2rem;
-    height: 64px;
+    height: 50px;
+    padding: .5rem 0rem;
     a {
-        color:black;
+      padding-left: 1rem;
+      color:black;
+    }
+    .navbar-toggler-right {
+      top: 20%;
+      border-color: rgba(white, 0.5);
+    }
+    .navbar-collapse {
+      border-bottom: 1px solid white;
+      background-color: rgba($colour-primary, 0.7);
     }
 }
 
@@ -15,4 +29,28 @@
 
 .white {
   background-color: white;
+  .navbar-toggler-right {
+    top: 20%;
+    border-color: rgba($colour-primary, 0.5);
+  }
+  .navbar-collapse {
+    background-color: white;
+    border-bottom: 1px solid rgba($colour-primary, 0.7);
+  }
+}
+
+
+.navbar-collapse {
+  border-bottom: 2px black;
+  padding-right: 1rem;
+}
+
+@media(min-width:576px) {
+  .navbar-toggler {
+    display: none !important;
+  }
+  .navbar-default .navbar-collapse {
+    border:none !important;
+    background-color: transparent;
+  }
 }

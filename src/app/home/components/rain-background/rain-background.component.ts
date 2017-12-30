@@ -22,8 +22,6 @@ export class RainBackgroundComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    console.log(this.drops);
   }
 
   makeItRain() {

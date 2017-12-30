@@ -11,11 +11,8 @@ export class ProjectLinkComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // console.dir(this.project);
-  }
-
-  getTitle():string {
-    // console.log(this.project);
-    return this.project.title;
+    if(!this.project.image) {
+      this.project.image = "no-image.png";
+    }
   }
 }
