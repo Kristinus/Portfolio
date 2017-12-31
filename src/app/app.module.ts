@@ -16,6 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TextBackgroundComponent } from './home/components/text-background/text-background.component';
 import { RainBackgroundComponent } from './home/components/rain-background/rain-background.component';
 import * as $ from 'jquery';
+import { SnowBackgroundComponent } from './home/components/snow-background/snow-background.component';
 window['$'] = window['jQuery'] = $;
 
 const appRoutes: Routes = [
@@ -35,7 +36,8 @@ const appRoutes: Routes = [
     ProjectLinkComponent,
     ProjectRowComponent,
     TextBackgroundComponent,
-    RainBackgroundComponent
+    RainBackgroundComponent,
+    SnowBackgroundComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(appRoutes),
