@@ -43,7 +43,7 @@ export class SnowBackgroundComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.canvas = document.getElementById('c');
+    this.canvas = document.getElementById('background');
     var context = this.canvas.getContext('2d');
 
     window.requestAnimationFrame = window.requestAnimationFrame ||
@@ -58,7 +58,7 @@ export class SnowBackgroundComponent implements OnInit {
     var points = [],
         sizeX = this.canvas.width,
         sizeY = this.canvas.height,
-        gravity = 0.4;
+        gravity = 0.1;
 
     var loop = function loop(data){
         clearCanvas();

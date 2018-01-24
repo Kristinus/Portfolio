@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectsService } from '../services/projects.service';
+import { ContentfulService } from '../services/contentful.service';
+import { Entry } from 'contentful';
 
 @Component({
   selector: 'app-projects',
@@ -8,11 +10,15 @@ import { ProjectsService } from '../services/projects.service';
 })
 export class ProjectsComponent implements OnInit {
   years: number[];
-  constructor(private _projects: ProjectsService ) {
+  private products: Entry<any>[] = [];
+  constructor(private contentfulService: ContentfulService, private _projects: ProjectsService ) {
+
     this.years = this._projects.getYears();
   }
 
   ngOnInit() {
+    this.contentfulService.getProjects().then(products => this.products = products);
+    console.log(this.products);
   }
 
 }

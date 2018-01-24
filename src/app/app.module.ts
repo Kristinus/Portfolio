@@ -10,13 +10,14 @@ import { IconGroupComponent } from './home/components/icon-group/icon-group.comp
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectLinkComponent } from './projects/components/project-link/project-link.component';
 import { ProjectsService } from './services/projects.service';
+import { ContentfulService } from './services/contentful.service';
 import { ProjectRowComponent } from './projects/components/project-row/project-row.component';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TextBackgroundComponent } from './home/components/text-background/text-background.component';
 import { RainBackgroundComponent } from './home/components/rain-background/rain-background.component';
-import * as $ from 'jquery';
 import { SnowBackgroundComponent } from './home/components/snow-background/snow-background.component';
+import * as $ from 'jquery';
 window['$'] = window['jQuery'] = $;
 
 const appRoutes: Routes = [
@@ -43,7 +44,7 @@ const appRoutes: Routes = [
     BrowserModule, RouterModule.forRoot(appRoutes),
     NgbModule.forRoot()
   ],
-  providers: [ ProjectsService ],
+  providers: [ ProjectsService, ContentfulService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

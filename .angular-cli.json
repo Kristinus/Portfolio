@@ -27,7 +27,8 @@
         "./resources/js/utils.js",
         "./resources/js/tether.js",
         "../node_modules/jquery/dist/jquery.min.js",
-        "./resources/js/bootstrap.min.js"
+        "./resources/js/bootstrap.min.js",
+        "./resources/js/index.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

@@ -38,11 +38,7 @@ export class ProjectsService {
     this.p2016.push(
       new Project(2017, "Black Mamba",
       "FRC robot", "BlackMamba-icon.jpg", "", "RickHansenRobotics/FRC-2016-1241-SH"));
-      this.p2017[1].tba = "1241/2016"
-
-    this.p2016.push(
-      new Project(2017, "Angular Motion Simulator",
-      "School Project", "", "", "RickHansenRobotics/FRC-2017-1241-SW"));
+      this.p2016[0].tba = "1241/2016"
   }
 
   getYears(): number[] {

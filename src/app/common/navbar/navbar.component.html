@@ -7,7 +7,7 @@
 
   <div id="collapse" [ngbCollapse] ="isCollapsed" class="navbar-collapse collapse">
     <ul class="nav navbar-nav navbar-right">
-      <li class="nav-link"><a href="mailto:bryan.m.kristiono@gmail.com">Contact</a></li>
+      <li class="nav-link"><a [routerLink]="['/About']">About</a></li>
       <li class="nav-link"><a [routerLink]="['/Projects']">Projects</a></li>
       <li class="nav-link"><a target="_blank" href="./assets/resume.pdf">Resume</a></li>
     </ul>

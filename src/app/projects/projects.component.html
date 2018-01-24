@@ -22,5 +22,10 @@
     </ngb-accordion> -->
     <app-project-row *ngFor="let year of years" [year]="year"></app-project-row>
   </div>
+  <ul class="u-listReset">
+    <li *ngFor="let project of projects">
+      {{ project.fields.title }}
+    </li>
+  </ul>
 
 </div>
