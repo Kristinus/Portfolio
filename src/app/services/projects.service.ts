@@ -4,9 +4,13 @@ export class Project {
   year: number;
   title: string;
   desc: string;
+  //Extension to Front Image
   image: string;
+  //Extension to devpost
   devpost: string;
+  //Extension to Github
   github: string;
+  //Extension to The Blue Alliance
   tba: string;
   constructor(year:number, title:string, desc:string, image:string, devpost: string, github:string) {
     this.year = year;
@@ -20,6 +24,7 @@ export class Project {
 
 @Injectable()
 export class ProjectsService {
+  private p2018: Project[] = [];
   private p2017: Project[] = [];
   private p2016: Project[] = [];
   private p2015: Project[] = [];
@@ -42,7 +47,7 @@ export class ProjectsService {
   }
 
   getYears(): number[] {
-    return [2017, 2016, 2015];
+    return [2018, 2017, 2016, 2015];
   }
 
   getProjects(year: number) {

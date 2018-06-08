@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { createClient, Entry } from 'contentful';
+// import { createClient, Entry } from 'contentful';
 
 const CONFIG = {
   space: '22734hw7lnx4',
@@ -12,17 +12,17 @@ const CONFIG = {
 
 @Injectable()
 export class ContentfulService {
-  private cdaClient = createClient({
-    space: CONFIG.space,
-    accessToken: CONFIG.accessToken
-  });
+  // private cdaClient = createClient({
+  //   space: CONFIG.space,
+  //   accessToken: CONFIG.accessToken
+  // });
 
   constructor() { }
 
-  getProjects(query?: object): Promise<Entry<any>[]> {
-    return this.cdaClient.getEntries(Object.assign({
-      content_type: CONFIG.contentTypeIds.product
-    }, query))
-    .then(res => res.items);
-  }
+  // getProjects(query?: object): Promise<Entry<any>[]> {
+  //   return this.cdaClient.getEntries(Object.assign({
+  //     content_type: CONFIG.contentTypeIds.product
+  //   }, query))
+  //   .then(res => res.items);
+  // }
 }

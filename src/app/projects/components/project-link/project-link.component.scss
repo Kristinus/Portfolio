@@ -1,12 +1,10 @@
-.project {
-  display: block;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+.project-card {
+  // display: block;
+  // border: 1px solid rgba(0, 0, 0, 0.3);
 
-  .project-image {
-    > img{
-      width:100%;
-      vertical-align: middle;
-    }
+  > img {
+    width:100%;
+    vertical-align: middle;
   }
 
   .cover {
@@ -37,8 +35,8 @@
   }
 
   .project-links {
-    padding: 4px 8px;
-    background-color: #f0f0f0;
+    // padding: 4px 8px;
+    // background-color: #f0f0f0;
     > a {
       display: inline-block;
       vertical-align: middle;

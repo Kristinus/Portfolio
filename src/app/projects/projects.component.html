@@ -1,25 +1,7 @@
-<app-navbar></app-navbar>
+<app-navbar color="white"></app-navbar>
 
 <div class="main-body">
   <div class="container">
-    <!-- <ngb-accordion [closeOthers]="true" activeIds="static-1">
-      <ngb-panel id="static-1" title="Simple">
-        <ng-template ngbPanelContent>
-        </ng-template>
-      </ngb-panel>
-      <ngb-panel id="static-2">
-        <ng-template ngbPanelTitle>
-          <span>2017</span>
-          <i class="fas fa-chevron-down"></i>
-        </ng-template>
-        <ng-template ngbPanelContent>
-        </ng-template>
-      </ngb-panel>
-      <ngb-panel id="static-3" title="Disabled" [disabled]="true">
-        <ng-template ngbPanelContent>
-        </ng-template>
-      </ngb-panel>
-    </ngb-accordion> -->
     <app-project-row *ngFor="let year of years" [year]="year"></app-project-row>
   </div>
   <ul class="u-listReset">

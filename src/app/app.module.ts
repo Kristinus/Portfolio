@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MatCardModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './common/navbar/navbar.component';
@@ -13,7 +14,6 @@ import { ProjectsService } from './services/projects.service';
 import { ContentfulService } from './services/contentful.service';
 import { ProjectRowComponent } from './projects/components/project-row/project-row.component';
 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TextBackgroundComponent } from './home/components/text-background/text-background.component';
 import { RainBackgroundComponent } from './home/components/rain-background/rain-background.component';
 import { SnowBackgroundComponent } from './home/components/snow-background/snow-background.component';
@@ -41,8 +41,8 @@ const appRoutes: Routes = [
     SnowBackgroundComponent
   ],
   imports: [
+    MatCardModule,
     BrowserModule, RouterModule.forRoot(appRoutes),
-    NgbModule.forRoot()
   ],
   providers: [ ProjectsService, ContentfulService ],
   bootstrap: [ AppComponent ]

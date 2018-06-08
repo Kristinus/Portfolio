@@ -17,8 +17,8 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.contentfulService.getProjects().then(products => this.products = products);
-    console.log(this.products);
+    // this.contentfulService.getProjects().then(products => this.products = products);
+    // console.log(this.products);
   }
 
 }
