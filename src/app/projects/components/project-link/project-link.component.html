@@ -1,10 +1,8 @@
 <mat-card class="project-card">
-  <mat-card-header>
-    <div mat-card-avatar></div>
-    <mat-card-title>{{this.project.title}}</mat-card-title>
-    <mat-card-subtitle></mat-card-subtitle>
-  </mat-card-header>
-  <img src="./assets/images/{{this.project.image}}">
+  <a appLink>
+      <img mat-card-image src="./assets/images/{{this.project.image}}">
+  </a>
+  <mat-card-title>{{this.project.title}}</mat-card-title>
   <mat-card-actions class="project-links">
     <a *ngIf="this.project.devpost" target="_blank" href="https://devpost.com/software/{{this.project.devpost}}">
       <img src="./assets/images/devpost-icon.svg">
@@ -17,31 +15,3 @@
       </a>
   </mat-card-actions>
 </mat-card>
-
-<!-- <a class="project">
-  <div class="project-image">
-    <img src="./assets/images/{{this.project.image}}">
-  </div>
-  <div>
-    <div class="project-desc">
-      <h4>
-        {{this.project.title}}
-      </h4>
-      <p>
-          {{this.project.desc}}
-      </p>
-    </div>
-
-    <div class="project-links">
-      <a *ngIf="this.project.devpost" target="_blank" href="https://devpost.com/software/{{this.project.devpost}}">
-        <img src="./assets/images/devpost-icon.svg">
-      </a>
-      <a *ngIf="this.project.github" target="_blank" href="https://github.com/{{this.project.github}}">
-        <img src="./assets/images/github-icon.svg">
-      </a>
-      <a *ngIf="this.project.tba" target="_blank" href="https://www.thebluealliance.com/team/{{this.project.tba}}">
-          <img src="./assets/images/tba-icon.png">
-        </a>
-    </div>
-  </div>
-</a> -->

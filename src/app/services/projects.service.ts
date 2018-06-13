@@ -2,56 +2,63 @@ import { Injectable } from '@angular/core';
 
 export class Project {
   year: number;
-  title: string;
+  name: string;
+  subtitle: string;
   desc: string;
-  //Extension to Front Image
+  // Extension to Front Image
   image: string;
-  //Extension to devpost
-  devpost: string;
-  //Extension to Github
-  github: string;
-  //Extension to The Blue Alliance
-  tba: string;
-  constructor(year:number, title:string, desc:string, image:string, devpost: string, github:string) {
-    this.year = year;
-    this.title = title;
-    this.desc = desc;
-    this.image = image;
-    this.devpost = devpost;
-    this.github = github;
-  }
+  // Extension to devpost
+  devpost?: string;
+  // Extension to Github
+  github?: string;
+  // Extension to The Blue Alliance
+  tba?: string;
 }
 
 @Injectable()
 export class ProjectsService {
-  private p2018: Project[] = [];
-  private p2017: Project[] = [];
-  private p2016: Project[] = [];
-  private p2015: Project[] = [];
-
-  private projects = { 2017:this.p2017, 2016:this.p2016, 2015:this.p2015 };
+  private projects: Project[] = [];
 
   constructor() {
-    this.p2017.push(
-      new Project(2017, "BruiseClues",
-      "An app that detects an injury from a photo", "BruiseClues-icon.jpg", "injurydetector", "Kristinus/InjuryDetector"));
-    this.p2017.push(
-      new Project(2017, "SpitFire",
-      "FRC robot", "Spitfire-icon.jpg", "", "RickHansenRobotics/FRC-2017-1241-SW"));
-      this.p2017[1].tba = "1241/2017"
-
-    this.p2016.push(
-      new Project(2017, "Black Mamba",
-      "FRC robot", "BlackMamba-icon.jpg", "", "RickHansenRobotics/FRC-2016-1241-SH"));
-      this.p2016[0].tba = "1241/2016"
+    this.projects.push(
+      {
+        year: 2017,
+        name: 'BruiseClues',
+        subtitle: 'Hackathon Project',
+        desc: 'An app that detects an injury from a photo',
+        image: 'BruiseClues-icon.jpg',
+        devpost: 'injurydetector',
+        github: 'Kristinus/InjuryDetector'
+      });
+    this.projects.push(
+      {
+        year: 2017,
+        name: 'SpitFire',
+        subtitle: 'FRC Robot',
+        desc: 'FRC Robot',
+        image: 'Spitfire-icon.jpg',
+        tba: '1241/2017',
+        github: 'RickHansenRobotics/FRC-2017-1241-SW'
+      });
+    this.projects.push(
+      {
+        year: 2016,
+        name: 'Black Mamba',
+        subtitle: 'FRC Robot',
+        desc: 'FRC Robot',
+        image: 'BlackMamba-icon.jpg',
+        tba: '1241/2016',
+        github: 'RickHansenRobotics/FRC-2016-1241-SH'
+      });
   }
+
 
   getYears(): number[] {
-    return [2018, 2017, 2016, 2015];
+    return Array.from(new Set(this.projects.map(x => x.year)));
   }
 
-  getProjects(year: number) {
-    return this.projects[year];
+  getProjectsByYear(year: number): Project[] {
+    return this.projects.filter(x => x.year === year);
   }
 
 }

@@ -12,7 +12,7 @@ export class ProjectLinkComponent implements OnInit {
 
   ngOnInit() {
     if(!this.project.image) {
-      this.project.image = "no-image.png";
+      this.project.image = 'no-image.png';
     }
   }
 }

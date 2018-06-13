@@ -1,3 +1,4 @@
+import { LinkDirective } from './directive/link.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -38,7 +39,8 @@ const appRoutes: Routes = [
     ProjectRowComponent,
     TextBackgroundComponent,
     RainBackgroundComponent,
-    SnowBackgroundComponent
+    SnowBackgroundComponent,
+    LinkDirective
   ],
   imports: [
     MatCardModule,

@@ -14,7 +14,7 @@ export class ProjectRowComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.projects = this._projectService.getProjects(this.year);
+    this.projects = this._projectService.getProjectsByYear(this.year);
   }
 
 }

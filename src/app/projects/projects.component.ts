@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjectsService } from '../services/projects.service';
+import { ProjectsService, Project } from '../services/projects.service';
 import { ContentfulService } from '../services/contentful.service';
 import { Entry } from 'contentful';
 
@@ -10,10 +10,10 @@ import { Entry } from 'contentful';
 })
 export class ProjectsComponent implements OnInit {
   years: number[];
-  private products: Entry<any>[] = [];
-  constructor(private contentfulService: ContentfulService, private _projects: ProjectsService ) {
 
-    this.years = this._projects.getYears();
+  constructor(private contentfulService: ContentfulService, private projectService: ProjectsService ) {
+
+    this.years = projectService.getYears();
   }
 
   ngOnInit() {
