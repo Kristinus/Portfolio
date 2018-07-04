@@ -1,8 +1,11 @@
 <mat-card class="project-card">
-  <a appLink>
+  <a *ngIf="project.link" appLink [routerLink]="[project.link]">
       <img mat-card-image src="./assets/images/{{this.project.image}}">
   </a>
-  <mat-card-title>{{this.project.title}}</mat-card-title>
+  <a *ngIf="!project.link">
+    <img mat-card-image src="./assets/images/{{this.project.image}}">
+</a>
+  <mat-card-title>{{ this.project.name }}</mat-card-title>
   <mat-card-actions class="project-links">
     <a *ngIf="this.project.devpost" target="_blank" href="https://devpost.com/software/{{this.project.devpost}}">
       <img src="./assets/images/devpost-icon.svg">

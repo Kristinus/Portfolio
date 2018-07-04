@@ -1,4 +1,3 @@
-<app-navbar [color]="'white'"></app-navbar>
 
 <div class="main-body">
   <div class="container">
@@ -8,8 +7,9 @@
   </div>
 </div>
 
-<app-rain-background></app-rain-background>
-<!-- <app-snow-background></app-snow-background> -->
+<app-rain-background *ngIf="spring || fall"></app-rain-background>
+<app-snow-background *ngIf="winter"></app-snow-background>
+<app-sunny-background *ngIf="summer"></app-sunny-background>
 
 <app-icon-group></app-icon-group>
 <!-- <app-footer></app-footer> -->

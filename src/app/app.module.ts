@@ -18,13 +18,17 @@ import { ProjectRowComponent } from './projects/components/project-row/project-r
 import { TextBackgroundComponent } from './home/components/text-background/text-background.component';
 import { RainBackgroundComponent } from './home/components/rain-background/rain-background.component';
 import { SnowBackgroundComponent } from './home/components/snow-background/snow-background.component';
+import { SunnyBackgroundComponent } from './home/components/sunny-background/sunny-background.component';
 import * as $ from 'jquery';
+import { ProjectPageComponent } from './projects/components/project-page/project-page.component';
+import { SunnyBackgroundDirective } from './home/components/sunny-background/sunny-background.directive';
 window['$'] = window['jQuery'] = $;
 
 const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'Projects', component: ProjectsComponent },
-  { path: '**', component: HomeComponent }
+  { path: '', component: HomeComponent },
+  { path: 'projects', component: ProjectsComponent },
+  { path: 'projects/:name', component: ProjectPageComponent },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
@@ -40,7 +44,10 @@ const appRoutes: Routes = [
     TextBackgroundComponent,
     RainBackgroundComponent,
     SnowBackgroundComponent,
-    LinkDirective
+    SunnyBackgroundComponent,
+    SunnyBackgroundDirective,
+    LinkDirective,
+    ProjectPageComponent
   ],
   imports: [
     MatCardModule,

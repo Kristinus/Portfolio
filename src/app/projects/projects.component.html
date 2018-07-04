@@ -1,15 +1,7 @@
-<app-navbar color="white"></app-navbar>
 
-<div class="main-body">
-  <div class="container">
-    <app-project-row *ngFor="let year of years" [year]="year"></app-project-row>
-  </div>
+    <div class="main-body">
+      <div class="container">
+        <app-project-row *ngFor="let year of years" [year]="year"></app-project-row>
+      </div>
+    </div>
 
-  <!-- contentful -->
-  <!-- <ul class="u-listReset">
-    <li *ngFor="let project of projects">
-      {{ project.fields.title }}
-    </li>
-  </ul> -->
-
-</div>

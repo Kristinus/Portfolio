@@ -4,6 +4,7 @@ export class Project {
   year: number;
   name: string;
   subtitle: string;
+  link?: string;
   desc: string;
   // Extension to Front Image
   image: string;
@@ -44,6 +45,7 @@ export class ProjectsService {
       {
         year: 2016,
         name: 'Black Mamba',
+        // link: 'blackMamba',
         subtitle: 'FRC Robot',
         desc: 'FRC Robot',
         image: 'BlackMamba-icon.jpg',

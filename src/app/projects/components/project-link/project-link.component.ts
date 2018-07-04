@@ -11,7 +11,7 @@ export class ProjectLinkComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    if(!this.project.image) {
+    if (!this.project.image) {
       this.project.image = 'no-image.png';
     }
   }

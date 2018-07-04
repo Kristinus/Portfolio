@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, Renderer } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 
 export class RainDrop {
   left: string;
@@ -17,7 +17,7 @@ export class RainBackgroundComponent implements OnInit {
 
   drops: RainDrop[] = [];
 
-  constructor(private renderer:Renderer) {
+  constructor(private renderer: Renderer2) {
     this.makeItRain();
   }
 
